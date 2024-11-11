@@ -44,7 +44,7 @@
           <li class="nav-item">
             <a href="<?= base_url('dashboard') ?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p><?= $title ?></p>
+              <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item">
