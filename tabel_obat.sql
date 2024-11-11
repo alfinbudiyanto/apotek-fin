@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Nov 2024 pada 17.53
+-- Waktu pembuatan: 11 Nov 2024 pada 13.30
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -18,40 +18,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `apotek`
+-- Database: `apotek_fin`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `obat`
+-- Struktur dari tabel `tabel_obat`
 --
 
-CREATE TABLE `obat` (
+CREATE TABLE `tabel_obat` (
   `id` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `harga` decimal(20,2) NOT NULL,
-  `stok` int(11) NOT NULL,
-  `exp` date NOT NULL
+  `nama_obat` varchar(255) NOT NULL,
+  `harga_obat` int(11) NOT NULL,
+  `stok_obat` int(11) NOT NULL,
+  `expire_obat` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `obat`
+-- Dumping data untuk tabel `tabel_obat`
 --
 
-INSERT INTO `obat` (`id`, `nama`, `harga`, `stok`, `exp`) VALUES
-(1, 'Paracetamol', '5000.75', 100, '2025-12-31'),
-(2, 'Amoxicillin', '15000.00', 50, '2024-07-30'),
-(3, 'Vitamin C', '10000.50', 200, '2026-05-15');
+INSERT INTO `tabel_obat` (`id`, `nama_obat`, `harga_obat`, `stok_obat`, `expire_obat`) VALUES
+(1, 'Paracetamol', 5000, 100, '2025-12-31'),
+(2, 'Amoxicillin', 15000, 50, '2024-07-30'),
+(3, 'Vitamin C', 10000, 200, '2026-05-15');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `obat`
+-- Indeks untuk tabel `tabel_obat`
 --
-ALTER TABLE `obat`
+ALTER TABLE `tabel_obat`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,9 +59,9 @@ ALTER TABLE `obat`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `obat`
+-- AUTO_INCREMENT untuk tabel `tabel_obat`
 --
-ALTER TABLE `obat`
+ALTER TABLE `tabel_obat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
