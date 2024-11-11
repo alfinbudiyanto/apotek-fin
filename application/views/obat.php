@@ -28,7 +28,7 @@
         <td><?= $o->expire_obat; ?></td>
         <td>
           <button data-toggle="modal" data-target="#edit<?= $o->id; ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
-          <a href="" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+          <a href="<?= base_url('obat/hapus/' . $o->id) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin gak hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
         </td>
       </tr>
       </tbody>

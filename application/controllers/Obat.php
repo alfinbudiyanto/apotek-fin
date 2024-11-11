@@ -45,7 +45,7 @@ class Obat extends CI_Controller {
       );
 
       $this->obat_model->insert_data($data, 'tabel_obat');
-      $this->session->set_flashdata('pesan', '<div class="alert alert-warning alert-dismissible fade show" role="alert">Data Berhasil Ditambahkan!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Data Berhasil Ditambahkan!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
       redirect('obat');
     }
   }
@@ -77,5 +77,14 @@ class Obat extends CI_Controller {
     $this->form_validation->set_rules('harga_obat', 'Harga Obat', 'required', array('required' => '%s harus diisi!!!'));
     $this->form_validation->set_rules('stok_obat', 'Stok Obat', 'required', array('required' => '%s harus diisi!!!'));
     $this->form_validation->set_rules('expire_obat', 'Expire Obat', 'required', array('required' => '%s harus diisi!!!'));
+  }
+
+  public function hapus($id)
+  {
+    $where = array('id' => $id);
+
+    $this->obat_model->delete_data($where, 'tabel_obat');
+    $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">Data Berhasil Dihapus!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+    redirect('obat');
   }
 }

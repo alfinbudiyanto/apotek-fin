@@ -18,4 +18,10 @@ class Obat_model extends CI_Model {
     $this->db->where('id', $data['id']);
     $this->db->update($tabel, $data);
   }
+
+  public function delete_data($where, $tabel)
+  {
+    $this->db->where($where);
+    $this->db->delete($tabel);
+  }
 }
