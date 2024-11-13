@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Nov 2024 pada 13.30
+-- Waktu pembuatan: 13 Nov 2024 pada 22.35
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -41,8 +41,19 @@ CREATE TABLE `tabel_obat` (
 
 INSERT INTO `tabel_obat` (`id`, `nama_obat`, `harga_obat`, `stok_obat`, `expire_obat`) VALUES
 (1, 'Paracetamol', 5000, 100, '2025-12-31'),
-(2, 'Amoxicillin', 15000, 50, '2024-07-30'),
-(3, 'Vitamin C', 10000, 200, '2026-05-15');
+(2, 'Amoxicillin', 17000, 50, '2024-07-30'),
+(3, 'Vitamin C', 10000, 200, '2026-05-15'),
+(5, 'Ibuprofen', 15000, 75, '2024-12-10'),
+(6, 'Loratadine', 12000, 60, '2025-09-11'),
+(7, 'Cetirizine', 11000, 45, '2024-12-29'),
+(9, 'Cetirizine', 21000, 250, '2026-04-12'),
+(10, 'Ranitidine', 14000, 100, '2028-02-19'),
+(11, 'Aspirin', 21000, 300, '2027-02-12'),
+(12, 'Metformin', 20000, 150, '2029-07-12'),
+(13, 'Simvastatin', 12000, 100, '2025-06-28'),
+(14, 'Omeprazole', 13000, 100, '2028-12-31'),
+(15, 'Amlodipine', 10000, 200, '2027-03-28'),
+(17, 'Lisinopril', 19000, 250, '2026-07-08');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +73,7 @@ ALTER TABLE `tabel_obat`
 -- AUTO_INCREMENT untuk tabel `tabel_obat`
 --
 ALTER TABLE `tabel_obat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
