@@ -1,8 +1,6 @@
-<h1>Dashboard untuk obat</h1>
-
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">DataTable with default features</h3>
+        <h3 class="card-title">Obat</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
@@ -17,6 +15,15 @@
                 </tr>
             </thead>
             <tbody>
+                <?php $no = 1; foreach ($data_obat as $o): ?>
+                    <tr>
+                        <td><?= $no++; ?></td>
+                        <td><?= $o->nama_obat; ?></td>
+                        <td><?= $o->harga_obat; ?></td>
+                        <td><?= $o->stok_obat; ?></td>
+                        <td><?= $o->expire_obat; ?></td>
+                    </tr>
+                <?php endforeach ?>
                 <tr>
                     <td>Trident</td>
                     <td>Internet Explorer 4.0</td>
