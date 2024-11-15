@@ -9,30 +9,30 @@
   <div class="card-body">
     <table id="example1" class="table table-bordered table-striped text-center">
       <thead>
-      <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>Harga</th>
-        <th>Stok</th>
-        <th>Expire</th>
-        <th>Aksi</th>
-      </tr>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Harga</th>
+          <th>Stok</th>
+          <th>Expire</th>
+          <th>Aksi</th>
+        </tr>
       </thead>
-      <?php $no = 1; foreach ($obat as $o): ?>
       <tbody>
-      <tr>
-        <td><?= $no++; ?></td>
-        <td><?= $o->nama_obat; ?></td>
-        <td><?= $o->harga_obat; ?></td>
-        <td><?= $o->stok_obat; ?></td>
-        <td><?= $o->expire_obat; ?></td>
-        <td>
-          <button data-toggle="modal" data-target="#edit<?= $o->id; ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
-          <a href="<?= base_url('obat/hapus/' . $o->id) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin gak hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
-        </td>
-      </tr>
+        <?php $no = 1; foreach ($obat as $o): ?>
+          <tr>
+            <td><?= $no++; ?></td>
+            <td><?= $o->nama_obat; ?></td>
+            <td><?= $o->harga_obat; ?></td>
+            <td><?= $o->stok_obat; ?></td>
+            <td><?= $o->expire_obat; ?></td>
+            <td>
+              <button data-toggle="modal" data-target="#edit<?= $o->id; ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</button>
+              <a href="<?= base_url('obat/hapus/' . $o->id) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin gak hapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+            </td>
+          </tr>
+        <?php endforeach ?>
       </tbody>
-      <?php endforeach ?>
     </table>
   </div>
   <!-- /.card-body -->
